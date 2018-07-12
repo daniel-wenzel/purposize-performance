@@ -1,0 +1,24 @@
+{
+  "name": "sut",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "config": "^1.30.0",
+    "cors": "^2.8.4",
+    "express": "^4.16.3",
+    "js-yaml": "^3.12.0",
+    "mysql2": "^1.5.3",
+    "purposize": "^1.0.11",
+    "sequelize": "^4.38.0",
+    "shortid": "^2.2.11"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

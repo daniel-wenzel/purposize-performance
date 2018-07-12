@@ -1,0 +1,12 @@
+6 Request/pro user
+
+m5.large for sut -> eu.west with io1 volume
+m5.xlarge for client -> eu.central
+
+scenarios 1 minute ramp up, 5 minutes constant load
+
+workloads
+rps user/s
+150 25
+300 50
+600 100

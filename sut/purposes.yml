@@ -1,0 +1,40 @@
+purposes:
+- name: SAVE
+  retentionPeriod: 60
+  relevantFields:
+    poster:
+      - posterDate
+      - dedication
+      - location
+- name: CUSTOMER_ACCESS
+  relevantFields:
+    poster:
+      - posterDate
+      - dedication
+      - location
+  compatibleWith:
+    - SAVE
+- name: QUALITY_ASSURANCE
+  loggingLevel: ACCESS
+  relevantFields:
+    poster:
+      - posterDate
+      - dedication
+      - location
+  compatibleWith:
+    - SAVE
+- name: RENDER
+  relevantFields:
+    poster:
+      - posterDate
+      - dedication
+      - location
+  compatibleWith:
+    - SAVE
+- name: OVERVIEW
+  relevantFields:
+    poster:
+      - posterDate
+      - location
+  compatibleWith:
+    - SAVE

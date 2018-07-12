@@ -1,0 +1,60 @@
+config:
+  target: 'http://localhost:3005'
+  phases:
+    - duration: 60
+      arrivalRate: 10
+      rampTo: 25
+    - duration: 300
+      arrivalRate: 25
+  defaults:
+    headers:
+      x-my-service-auth: '987401838271002188298567'
+  variables:
+    location:
+    - Berlin
+    - "New York"
+    - "Tokio"
+    - "Hamburg"
+    style:
+    - night
+    - minimal
+scenarios:
+  - flow:
+    - post:
+        url: /posters/create
+        json:
+          posterDate: 123213
+          coords:
+            - 20
+            - 20
+          location: "{{ location }}"
+          dedication: "Greetngs from {{ location }}"
+          style: "{{ style }}"
+          showStars: true
+          showMilkyway: false
+          showCoordinateNet: true
+          showConstellations: true
+        capture:
+          json: "$.id"
+          as: "posterId"
+    - get:
+        url: "/posters/{{ posterId }}?for=RENDER"
+    - get:
+        url: "/posters/{{ posterId }}?for=CUSTOMER_ACCESS"
+    - put:
+        url: /posters/{{ posterId }}
+        json:
+          posterId: "{{ posterId }}"
+          posterDate: 123
+          coords:
+            - 20
+            - 20
+          location: "{{ location }}"
+          dedication: "Greetngs from {{ location }}"
+          style: "{{ style }}"
+          showStars: true
+          showMilkyway: false
+          showCoordinateNet: true
+          showConstellations: true
+    - get:
+        url: "/posters/{{ posterId }}?for=RENDER"
