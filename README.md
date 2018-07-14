@@ -1,5 +1,5 @@
 # purposize-performance
-Simple performance testing tool for purposize using artillery.
+Simple performance benchmark for purposize using artillery.
 
 ## Getting Started
 1. Create a sut-server and a client server.
