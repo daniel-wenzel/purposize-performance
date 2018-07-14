@@ -3,6 +3,7 @@ Simple performance benchmark for purposize using artillery.
 
 ## Getting Started
 1. Create a sut-server and a client server.
+
 On SUT Server
 2. Open port 3005 for sut server
 3. Install mysql
@@ -28,6 +29,8 @@ cd sut && npm i && cd ..
 13. Install artillery
 ```
 npm i -g artillery
+```
+
 14. Run benchmark: 
 ```
 ./benchmark/benchmark.sh
