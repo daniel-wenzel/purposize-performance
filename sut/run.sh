@@ -8,11 +8,11 @@ function start {
 }
 
 while true; do
-  # export USE_PURPOSIZE=false
-  # start
+  export USE_PURPOSIZE=false
+  start
   export USE_PURPOSIZE=true
-  # export USE_CACHE=true
-  # start
+  export USE_CACHE=true
+  start
   export USE_CACHE=false
   start
 done

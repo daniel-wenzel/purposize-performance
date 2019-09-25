@@ -6,6 +6,7 @@ function run {
   mkdir results/$1_$2_$3
   artillery run benchmark$1.yml -o results/$1_$2_$3
   curl "$sutURL/kill"
+  sleep 5
 }
 declare -a arr=("75" "150" "300" "600")
 
