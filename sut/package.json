@@ -10,7 +10,7 @@
     "js-yaml": "^3.13.1",
     "mysql2": "^1.7.0",
     "purposize": "^1.1.4",
-    "sequelize": "^4.44.3",
+    "sequelize": "^5.15.1",
     "shortid": "^2.2.15"
   },
   "devDependencies": {},
